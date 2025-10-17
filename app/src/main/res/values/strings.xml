@@ -2,4 +2,13 @@
     <string name="app_name">Sight Reading Made Easy</string>
     <string name="surprise">Surprise</string>
     <string name="author">Created By Frances Yeboah P7</string>
+    <string name="opening">opening</string>
+    <string name="homepageimg">homepageimg</string>
+    <string name="home_nav">Home</string>
+    <string name="about_nav">About</string>
+    <string name="treble_nav">Treble</string>
+    <string name="alto_nav">Alto</string>
+    <string name="bass_nav">Bass</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
