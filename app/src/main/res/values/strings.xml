@@ -9,6 +9,24 @@
     <string name="treble_nav">Treble</string>
     <string name="alto_nav">Alto</string>
     <string name="bass_nav">Bass</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="quiz_treble_clef_notes">Quiz: Treble Clef Notes</string>
+    <string name="what_is_this_note">What is this note?</string>
+    <string name="quiz_Alto_clef_notes">Quiz: Alto Clef Notes</string>
+    <string name="quiz_Bass_clef_notes">Quiz: Bass Clef Notes</string>
+    <string name="about_text"> I made this app so users can practice sight reading skills. I enjoy music, and I play an instrument. I know sight reading sheet music can be hard at first, so this app helps alleviate that. You can get more comfortable with reading sheet music so that you can play your music more efficiently.
+\n\n
+Instructions:\n\n
+When you first open Sight Reading Made Easy, you encounter a home page with a navigation bar on the bottom. Press on any of the clef buttons to go to the quiz corresponding with that particular page.
+Now, you will see an image with a note, a question, a blank space, and a picture of instruments in that order. You should answer the question in the blank provided under the image. After you answer the question, press submit. If you got the question right, you will receive feedback saying ‘Correct!’, hear the piano note, and get to choose from a dropdown menu of instruments to hear that note. If you got it incorrect, you will receive feedback saying ‘Incorrect!’ and feel a vibration on your phone. You can try again as many times as you want.
+\n\n
+
+
+Acknowledgements:
+       \n\n
+Thank you to Dan Tra for teaching me how to create apps in Android Studio, and how to code in general. I would never have gotten this far in my Computer Science journey without him.
+\n\n
+Thank you to Sarah Bryk for teaching me how to play clarinet, I learned how to read and play music all thanks to her. She inspired me to continue playing an instrument in high school. \n\n\n\n\n
+</string>
+    <string name="submit_answer">Submit Answer</string>
+    <string name="next">Next</string>
 </resources>
