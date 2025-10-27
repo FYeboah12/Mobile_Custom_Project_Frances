@@ -5,4 +5,6 @@
     <color name="lilac">#ECC6FF</color>
     <color name="palepink">#fddde6</color>
     <color name="babyblue">#d1e7ff</color>
+    <color name="correct">#50C878</color>
+    <color name="incorrect">#D22B2B</color>
 </resources>
