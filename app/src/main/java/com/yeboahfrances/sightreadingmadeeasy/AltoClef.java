@@ -79,54 +79,79 @@ public class AltoClef extends Fragment implements AdapterView.OnItemSelectedList
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        MediaPlayer n1 = MediaPlayer.create(view.getContext(), R.raw.note);
-        MediaPlayer n2 = MediaPlayer.create(view.getContext(), R.raw.note2);
-        MediaPlayer n3 = MediaPlayer.create(view.getContext(), R.raw.note3);
-        //switch within a switch, use notes[count] or make a new field "currentNote" and play
-        MediaPlayer pianoA = MediaPlayer.create(view.getContext(), R.raw.treb_piano_a);
-        MediaPlayer pianoB = MediaPlayer.create(view.getContext(), R.raw.treb_piano_b);
-        MediaPlayer pianoC = MediaPlayer.create(view.getContext(), R.raw.treb_piano_c);
-        MediaPlayer pianoD = MediaPlayer.create(view.getContext(), R.raw.treb_piano_d);
-        MediaPlayer pianoE = MediaPlayer.create(view.getContext(), R.raw.treb_piano_e);
-        MediaPlayer pianoF = MediaPlayer.create(view.getContext(), R.raw.treb_piano_f);
-        MediaPlayer pianoG = MediaPlayer.create(view.getContext(), R.raw.treb_piano_g);
-        MediaPlayer clarinetA;
-        MediaPlayer clarinetB;
-        MediaPlayer clarinetC;
-        MediaPlayer clarinetD;
-        MediaPlayer clarinetE;
-        MediaPlayer clarinetF;
-        MediaPlayer clarinetG;
-        MediaPlayer violinA;
-        MediaPlayer violinB;
-        MediaPlayer violinC;
-        MediaPlayer violinD;
-        MediaPlayer violinE;
-        MediaPlayer violinF;
-        MediaPlayer violinG;
-        if(play) {
-            switch (position) {
-                case 0:
-                    if (note_names[count].equals("A"))
-                        pianoA.start();
-                    if (note_names[count].equals("B"))
-                        pianoB.start();
-                    if (note_names[count].equals("C"))
-                        pianoC.start();
-                    if (note_names[count].equals("D"))
-                        pianoD.start();
-                    if (note_names[count].equals("E"))
-                        pianoE.start();
-                    if (note_names[count].equals("F"))
-                        pianoF.start();
-                    if (note_names[count].equals("G"))
-                        pianoG.start();
-                case 1:
-                    n2.start();
-                    break;
-                case 2:
-                    n3.start();
-                    break;
+        if(view != null) {
+            MediaPlayer pianoA = MediaPlayer.create(view.getContext(), R.raw.treb_piano_a);
+            MediaPlayer pianoB = MediaPlayer.create(view.getContext(), R.raw.treb_piano_b);
+            MediaPlayer pianoC = MediaPlayer.create(view.getContext(), R.raw.treb_piano_c);
+            MediaPlayer pianoD = MediaPlayer.create(view.getContext(), R.raw.treb_piano_d);
+            MediaPlayer pianoE = MediaPlayer.create(view.getContext(), R.raw.treb_piano_e);
+            MediaPlayer pianoF = MediaPlayer.create(view.getContext(), R.raw.treb_piano_f);
+            MediaPlayer pianoG = MediaPlayer.create(view.getContext(), R.raw.treb_piano_g);
+            MediaPlayer bassClarinetA = MediaPlayer.create(view.getContext(), R.raw.treb_bc_a);
+            MediaPlayer bassClarinetB = MediaPlayer.create(view.getContext(), R.raw.treb_bc_b);
+            MediaPlayer bassClarinetC = MediaPlayer.create(view.getContext(), R.raw.treb_bc_c);
+            MediaPlayer bassClarinetD = MediaPlayer.create(view.getContext(), R.raw.treb_bc_d);
+            MediaPlayer bassClarinetE = MediaPlayer.create(view.getContext(), R.raw.treb_bc_e);
+            MediaPlayer bassClarinetF = MediaPlayer.create(view.getContext(), R.raw.treb_bc_f);
+            MediaPlayer bassClarinetG = MediaPlayer.create(view.getContext(), R.raw.treb_bc_g);
+            MediaPlayer violinA = MediaPlayer.create(view.getContext(), R.raw.treb_v_a);
+            MediaPlayer violinB = MediaPlayer.create(view.getContext(), R.raw.treb_v_b);
+            MediaPlayer violinC = MediaPlayer.create(view.getContext(), R.raw.treb_v_c);
+            MediaPlayer violinD = MediaPlayer.create(view.getContext(), R.raw.treb_v_d);
+            MediaPlayer violinE = MediaPlayer.create(view.getContext(), R.raw.treb_v_e);
+            MediaPlayer violinF = MediaPlayer.create(view.getContext(), R.raw.treb_v_f);
+            MediaPlayer violinG = MediaPlayer.create(view.getContext(), R.raw.treb_v_g);
+            if (play) {
+                switch (position) {
+                    case 0:
+                        if (note_names[count].equals("A"))
+                            pianoA.start();
+                        if (note_names[count].equals("B"))
+                            pianoB.start();
+                        if (note_names[count].equals("C"))
+                            pianoC.start();
+                        if (note_names[count].equals("D"))
+                            pianoD.start();
+                        if (note_names[count].equals("E"))
+                            pianoE.start();
+                        if (note_names[count].equals("F"))
+                            pianoF.start();
+                        if (note_names[count].equals("G"))
+                            pianoG.start();
+                    case 1:
+                        if (note_names[count].equals("A"))
+                            bassClarinetA.start();
+                        if (note_names[count].equals("B"))
+                            bassClarinetB.start();
+                        if (note_names[count].equals("C"))
+                            bassClarinetC.start();
+                        if (note_names[count].equals("D"))
+                            bassClarinetD.start();
+                        if (note_names[count].equals("E"))
+                            bassClarinetE.start();
+                        if (note_names[count].equals("F"))
+                            bassClarinetF.start();
+                        if (note_names[count].equals("G"))
+                            bassClarinetG.start();
+                        break;
+                    case 2:
+                        if (note_names[count].equals("A"))
+                            violinA.start();
+                        if (note_names[count].equals("B"))
+                            violinB.start();
+                        if (note_names[count].equals("C"))
+                            violinC.start();
+                        if (note_names[count].equals("D"))
+                            violinD.start();
+                        if (note_names[count].equals("E"))
+                            violinE.start();
+                        if (note_names[count].equals("F"))
+                            violinF.start();
+                        if (note_names[count].equals("G"))
+                            violinG.start();
+                        break;
+
+                }
 
             }
         }

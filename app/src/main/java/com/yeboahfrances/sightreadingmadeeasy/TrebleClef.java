@@ -4,6 +4,7 @@ import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.HapticFeedbackConstants;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -103,6 +104,7 @@ public class TrebleClef extends Fragment implements AdapterView.OnItemSelectedLi
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+        if(view != null){
         MediaPlayer pianoA = MediaPlayer.create(view.getContext(), R.raw.treb_piano_a);
         MediaPlayer pianoB = MediaPlayer.create(view.getContext(), R.raw.treb_piano_b);
         MediaPlayer pianoC = MediaPlayer.create(view.getContext(), R.raw.treb_piano_c);
@@ -173,6 +175,8 @@ public class TrebleClef extends Fragment implements AdapterView.OnItemSelectedLi
                     if (note_names[count].equals("G"))
                         violinG.start();
                     break;
+
+                }
 
             }
         }
