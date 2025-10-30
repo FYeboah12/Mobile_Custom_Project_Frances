@@ -9,6 +9,7 @@
     tools:context=".MainActivity">
 
     <Button
+        android:fontFamily="@font/comfortaa"
         android:id="@+id/surprise_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -27,6 +28,7 @@
         tools:ignore="MissingConstraints" />
 
     <TextView
+        android:fontFamily="@font/comfortaa"
         android:id="@+id/name_and_period"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

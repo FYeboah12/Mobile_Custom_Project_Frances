@@ -24,7 +24,7 @@ import androidx.fragment.app.Fragment;
 
 public class TrebleClef extends Fragment implements AdapterView.OnItemSelectedListener{
     private final int[] notes = {R.drawable.treble_staff_o6,R.drawable.treble_staff_o5,R.drawable.treble_staff_o4,R.drawable.treble_staff_o3,R.drawable.treble_staff_o2,R.drawable.treble_staff_o1,R.drawable.treble_staff,R.drawable.treble_staff__2_,R.drawable.treble_staff__3_,R.drawable.treble_staff__4_,R.drawable.treble_staff__5_,R.drawable.treble_staff__6_,R.drawable.treble_staff__7_,R.drawable.treble_staff__8_,R.drawable.treble_staff__9_,R.drawable.treble_staff__10_,R.drawable.treble_staff__11_,R.drawable.treble_staff_o7,R.drawable.treble_staff_o8,R.drawable.treble_staff_o9,R.drawable.treble_staff_o10,R.drawable.treble_staff_o11,R.drawable.treble_staff_o12,R.drawable.treble_staff_o13,};
-    private final String[] note_names = {"D","E","F","G","A","B","C","D","E","F","G","A","B","C","D","E","F","G","A","B","C","D","E","F","G"};
+    private final String[] note_names = {"E","F","G","A","B","C","D","E","F","G","A","B","C","D","E","F","G","A","B","C","D","E","F","G"};
     int count = 1;
     boolean play = false;
     @Nullable

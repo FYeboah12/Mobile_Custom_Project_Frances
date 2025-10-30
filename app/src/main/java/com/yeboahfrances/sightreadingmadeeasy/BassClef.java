@@ -22,7 +22,7 @@ import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
 
 public class BassClef extends Fragment implements AdapterView.OnItemSelectedListener{
-    private final int[] notes = {R.drawable.bass_staff__16_,R.drawable.bass_staff__15_,R.drawable.bass_staff__14_,R.drawable.bass_staff__13_,R.drawable.bass_staff__12_,R.drawable.bass_staff__11_,R.drawable.bass_staff,R.drawable.bass_staff__forgot_,R.drawable.bass_staff__2_,R.drawable.bass_staff__3_,R.drawable.bass_staff__4_,R.drawable.bass_staff__5_,R.drawable.bass_staff__6_,R.drawable.bass_staff__7_,R.drawable.bass_staff__8_,R.drawable.bass_staff__9_,R.drawable.bass_staff__10_,R.drawable.bass_staff__18_,R.drawable.bass_staff__19_,R.drawable.bass_staff__20_,R.drawable.bass_staff__21_,R.drawable.bass_staff__22_,R.drawable.bass_staff__23_,R.drawable.bass_staff__24_};
+    private final int[] notes = {R.drawable.bass_staff__17_,R.drawable.bass_staff__16_,R.drawable.bass_staff__15_,R.drawable.bass_staff__14_,R.drawable.bass_staff__13_,R.drawable.bass_staff__12_,R.drawable.bass_staff__11_,R.drawable.bass_staff,R.drawable.bass_staff__forgot_,R.drawable.bass_staff__2_,R.drawable.bass_staff__3_,R.drawable.bass_staff__4_,R.drawable.bass_staff__5_,R.drawable.bass_staff__6_,R.drawable.bass_staff__7_,R.drawable.bass_staff__8_,R.drawable.bass_staff__9_,R.drawable.bass_staff__10_,R.drawable.bass_staff__18_,R.drawable.bass_staff__19_,R.drawable.bass_staff__20_,R.drawable.bass_staff__21_,R.drawable.bass_staff__22_,R.drawable.bass_staff__23_,R.drawable.bass_staff__24_};
     private final String[] note_names = {"F","G","A","B","C","D","E","F","G","A","B","C","D","E","F","G","A","B","C","D","E","F","G","A","B"};
     int count = 1;
     boolean play = false;
@@ -39,7 +39,7 @@ public class BassClef extends Fragment implements AdapterView.OnItemSelectedList
         TextView response = view.findViewById(R.id.correct);
         MediaPlayer mediaPlayer = MediaPlayer.create(view.getContext(), R.raw.note);
         Spinner dropdown = view.findViewById(R.id.inst_dropdown);
-        String[] instruments = new String[]{"Piano","Tuba","Trombone"};
+        String[] instruments = new String[]{"Piano","Tuba","Cello"};
         ArrayAdapter<String> adapter = new ArrayAdapter<>(view.getContext(), android.R.layout.simple_spinner_dropdown_item, instruments);
         dropdown.setAdapter(adapter);
         dropdown.setOnItemSelectedListener(this);

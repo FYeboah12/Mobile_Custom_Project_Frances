@@ -22,7 +22,7 @@ import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
 
 public class AltoClef extends Fragment{
-    private final int[] notes = {R.drawable.alto_staff__16_,R.drawable.alto_staff__15_,R.drawable.alto_staff__14_,R.drawable.alto_staff__13_,R.drawable.alto_staff__12_,R.drawable.alto_staff,R.drawable.alto_staff__2_,R.drawable.alto_staff__3_,R.drawable.alto_staff__4_,R.drawable.alto_staff__5_,R.drawable.alto_staff__6_,R.drawable.alto_staff__7_,R.drawable.alto_staff__8_,R.drawable.alto_staff__9_,R.drawable.alto_staff__10_,R.drawable.alto_staff__11_,R.drawable.alto_staff__17_,R.drawable.alto_staff__18_,R.drawable.alto_staff__19_,R.drawable.alto_staff__20_,R.drawable.alto_staff__21_,R.drawable.bass_staff__22_};
+    private final int[] notes = {R.drawable.alto_staff__16_,R.drawable.alto_staff__15_,R.drawable.alto_staff__14_,R.drawable.alto_staff__13_,R.drawable.alto_staff__12_,R.drawable.alto_staff,R.drawable.alto_staff__2_,R.drawable.alto_staff__3_,R.drawable.alto_staff__4_,R.drawable.alto_staff__5_,R.drawable.alto_staff__6_,R.drawable.alto_staff__7_,R.drawable.alto_staff__8_,R.drawable.alto_staff__9_,R.drawable.alto_staff__10_,R.drawable.alto_staff__11_,R.drawable.alto_staff__17_,R.drawable.alto_staff__18_,R.drawable.alto_staff__19_,R.drawable.alto_staff__20_,R.drawable.alto_staff__21_};
 
     private final String[] note_names = {"G","A","B","C","D","E","F","G","A","B","C","D","E","F","G","A","B","C","D","E","F"};
     int count = 1;
