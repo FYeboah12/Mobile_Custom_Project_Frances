@@ -22,8 +22,8 @@ import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
 
 public class BassClef extends Fragment implements AdapterView.OnItemSelectedListener{
-    private final int[] notes = {R.drawable.bass_staff,R.drawable.bass_staff__2_,R.drawable.bass_staff__3_,R.drawable.bass_staff__4_,R.drawable.bass_staff__5_,R.drawable.bass_staff__6_,R.drawable.bass_staff__7_,R.drawable.bass_staff__8_,R.drawable.bass_staff__9_,R.drawable.bass_staff__10_,R.drawable.bass_staff__11_};
-    private final String[] note_names = {"E","F","G","A","B","C","D","E","F","G","A","B","C","D","E","F","G","A","B","C","D","E","F","G"};
+    private final int[] notes = {R.drawable.bass_staff__16_,R.drawable.bass_staff__15_,R.drawable.bass_staff__14_,R.drawable.bass_staff__13_,R.drawable.bass_staff__12_,R.drawable.bass_staff__11_,R.drawable.bass_staff,R.drawable.bass_staff__forgot_,R.drawable.bass_staff__2_,R.drawable.bass_staff__3_,R.drawable.bass_staff__4_,R.drawable.bass_staff__5_,R.drawable.bass_staff__6_,R.drawable.bass_staff__7_,R.drawable.bass_staff__8_,R.drawable.bass_staff__9_,R.drawable.bass_staff__10_,R.drawable.bass_staff__18_,R.drawable.bass_staff__19_,R.drawable.bass_staff__20_,R.drawable.bass_staff__21_,R.drawable.bass_staff__22_,R.drawable.bass_staff__23_,R.drawable.bass_staff__24_};
+    private final String[] note_names = {"F","G","A","B","C","D","E","F","G","A","B","C","D","E","F","G","A","B","C","D","E","F","G","A","B"};
     int count = 1;
     boolean play = false;
     @Nullable
@@ -85,27 +85,27 @@ public class BassClef extends Fragment implements AdapterView.OnItemSelectedList
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         if(view != null) {
-            MediaPlayer pianoA = MediaPlayer.create(view.getContext(), R.raw.treb_piano_a);
-            MediaPlayer pianoB = MediaPlayer.create(view.getContext(), R.raw.treb_piano_b);
-            MediaPlayer pianoC = MediaPlayer.create(view.getContext(), R.raw.treb_piano_c);
-            MediaPlayer pianoD = MediaPlayer.create(view.getContext(), R.raw.treb_piano_d);
-            MediaPlayer pianoE = MediaPlayer.create(view.getContext(), R.raw.treb_piano_e);
-            MediaPlayer pianoF = MediaPlayer.create(view.getContext(), R.raw.treb_piano_f);
-            MediaPlayer pianoG = MediaPlayer.create(view.getContext(), R.raw.treb_piano_g);
-            MediaPlayer bassClarinetA = MediaPlayer.create(view.getContext(), R.raw.treb_bc_a);
-            MediaPlayer bassClarinetB = MediaPlayer.create(view.getContext(), R.raw.treb_bc_b);
-            MediaPlayer bassClarinetC = MediaPlayer.create(view.getContext(), R.raw.treb_bc_c);
-            MediaPlayer bassClarinetD = MediaPlayer.create(view.getContext(), R.raw.treb_bc_d);
-            MediaPlayer bassClarinetE = MediaPlayer.create(view.getContext(), R.raw.treb_bc_e);
-            MediaPlayer bassClarinetF = MediaPlayer.create(view.getContext(), R.raw.treb_bc_f);
-            MediaPlayer bassClarinetG = MediaPlayer.create(view.getContext(), R.raw.treb_bc_g);
-            MediaPlayer violinA = MediaPlayer.create(view.getContext(), R.raw.treb_v_a);
-            MediaPlayer violinB = MediaPlayer.create(view.getContext(), R.raw.treb_v_b);
-            MediaPlayer violinC = MediaPlayer.create(view.getContext(), R.raw.treb_v_c);
-            MediaPlayer violinD = MediaPlayer.create(view.getContext(), R.raw.treb_v_d);
-            MediaPlayer violinE = MediaPlayer.create(view.getContext(), R.raw.treb_v_e);
-            MediaPlayer violinF = MediaPlayer.create(view.getContext(), R.raw.treb_v_f);
-            MediaPlayer violinG = MediaPlayer.create(view.getContext(), R.raw.treb_v_g);
+            MediaPlayer pianoA = MediaPlayer.create(view.getContext(), R.raw.bass_piano_a);
+            MediaPlayer pianoB = MediaPlayer.create(view.getContext(), R.raw.bass_piano_b);
+            MediaPlayer pianoC = MediaPlayer.create(view.getContext(), R.raw.bass_piano_c);
+            MediaPlayer pianoD = MediaPlayer.create(view.getContext(), R.raw.bass_piano_d);
+            MediaPlayer pianoE = MediaPlayer.create(view.getContext(), R.raw.bass_piano_e);
+            MediaPlayer pianoF = MediaPlayer.create(view.getContext(), R.raw.bass_piano_f);
+            MediaPlayer pianoG = MediaPlayer.create(view.getContext(), R.raw.bass_piano_g);
+            MediaPlayer tubaA = MediaPlayer.create(view.getContext(), R.raw.bass_tuba_a);
+            MediaPlayer tubaB = MediaPlayer.create(view.getContext(), R.raw.bass_tuba_b);
+            MediaPlayer tubaC = MediaPlayer.create(view.getContext(), R.raw.bass_tuba_c);
+            MediaPlayer tubaD = MediaPlayer.create(view.getContext(), R.raw.bass_tuba_d);
+            MediaPlayer tubaE = MediaPlayer.create(view.getContext(), R.raw.bass_tuba_e);
+            MediaPlayer tubaF = MediaPlayer.create(view.getContext(), R.raw.bass_tuba_f);
+            MediaPlayer tubaG = MediaPlayer.create(view.getContext(), R.raw.bass_tuba_g);
+            MediaPlayer celloA = MediaPlayer.create(view.getContext(), R.raw.bass_cello_a);
+            MediaPlayer celloB = MediaPlayer.create(view.getContext(), R.raw.bass_cello_b);
+            MediaPlayer celloC = MediaPlayer.create(view.getContext(), R.raw.bass_cello_c);
+            MediaPlayer celloD = MediaPlayer.create(view.getContext(), R.raw.bass_cello_d);
+            MediaPlayer celloE = MediaPlayer.create(view.getContext(), R.raw.bass_cello_e);
+            MediaPlayer celloF = MediaPlayer.create(view.getContext(), R.raw.bass_cello_f);
+            MediaPlayer celloG = MediaPlayer.create(view.getContext(), R.raw.bass_cello_g);
             if (play) {
                 switch (position) {
                     case 0:
@@ -125,35 +125,35 @@ public class BassClef extends Fragment implements AdapterView.OnItemSelectedList
                             pianoG.start();
                     case 1:
                         if (note_names[count].equals("A"))
-                            bassClarinetA.start();
+                            tubaA.start();
                         if (note_names[count].equals("B"))
-                            bassClarinetB.start();
+                            tubaB.start();
                         if (note_names[count].equals("C"))
-                            bassClarinetC.start();
+                            tubaC.start();
                         if (note_names[count].equals("D"))
-                            bassClarinetD.start();
+                            tubaD.start();
                         if (note_names[count].equals("E"))
-                            bassClarinetE.start();
+                            tubaE.start();
                         if (note_names[count].equals("F"))
-                            bassClarinetF.start();
+                            tubaF.start();
                         if (note_names[count].equals("G"))
-                            bassClarinetG.start();
+                            tubaG.start();
                         break;
                     case 2:
                         if (note_names[count].equals("A"))
-                            violinA.start();
+                            celloA.start();
                         if (note_names[count].equals("B"))
-                            violinB.start();
+                            celloB.start();
                         if (note_names[count].equals("C"))
-                            violinC.start();
+                            celloC.start();
                         if (note_names[count].equals("D"))
-                            violinD.start();
+                            celloD.start();
                         if (note_names[count].equals("E"))
-                            violinE.start();
+                            celloE.start();
                         if (note_names[count].equals("F"))
-                            violinF.start();
+                            celloF.start();
                         if (note_names[count].equals("G"))
-                            violinG.start();
+                            celloG.start();
                         break;
 
                 }

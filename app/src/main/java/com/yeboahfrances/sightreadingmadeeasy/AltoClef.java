@@ -21,9 +21,10 @@ import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
 
-public class AltoClef extends Fragment implements AdapterView.OnItemSelectedListener{
-    private final int[] notes = {R.drawable.alto_staff,R.drawable.alto_staff__2_,R.drawable.alto_staff__3_,R.drawable.alto_staff__4_,R.drawable.alto_staff__5_,R.drawable.alto_staff__6_,R.drawable.alto_staff__7_,R.drawable.alto_staff__8_,R.drawable.alto_staff__9_,R.drawable.alto_staff__10_,R.drawable.alto_staff__11_};
-    private final String[] note_names = {"E","F","G","A","B","C","D","E","F","G","A","B","C","D","E","F","G","A","B","C","D","E","F","G"};
+public class AltoClef extends Fragment{
+    private final int[] notes = {R.drawable.alto_staff__16_,R.drawable.alto_staff__15_,R.drawable.alto_staff__14_,R.drawable.alto_staff__13_,R.drawable.alto_staff__12_,R.drawable.alto_staff,R.drawable.alto_staff__2_,R.drawable.alto_staff__3_,R.drawable.alto_staff__4_,R.drawable.alto_staff__5_,R.drawable.alto_staff__6_,R.drawable.alto_staff__7_,R.drawable.alto_staff__8_,R.drawable.alto_staff__9_,R.drawable.alto_staff__10_,R.drawable.alto_staff__11_,R.drawable.alto_staff__17_,R.drawable.alto_staff__18_,R.drawable.alto_staff__19_,R.drawable.alto_staff__20_,R.drawable.alto_staff__21_,R.drawable.bass_staff__22_};
+
+    private final String[] note_names = {"G","A","B","C","D","E","F","G","A","B","C","D","E","F","G","A","B","C","D","E","F"};
     int count = 1;
     boolean play = false;
     @Nullable
@@ -31,13 +32,20 @@ public class AltoClef extends Fragment implements AdapterView.OnItemSelectedList
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState){
         //use view.getContext() instead of this
         View view = inflater.inflate(R.layout.fragment_alto_clef, container, false);
+        //if view is not null
+        MediaPlayer violaA = MediaPlayer.create(view.getContext(), R.raw.alto_viola_a);
+        MediaPlayer violaB = MediaPlayer.create(view.getContext(), R.raw.alto_viola_b);
+        MediaPlayer violaC = MediaPlayer.create(view.getContext(), R.raw.alto_viola_c);
+        MediaPlayer violaD = MediaPlayer.create(view.getContext(), R.raw.alto_viola_d);
+        MediaPlayer violaE = MediaPlayer.create(view.getContext(), R.raw.alto_viola_e);
+        MediaPlayer violaF = MediaPlayer.create(view.getContext(), R.raw.alto_viola_f);
+        MediaPlayer violaG = MediaPlayer.create(view.getContext(), R.raw.alto_viola_g);
         ImageView imgs = view.findViewById(R.id.note_imgs);
         imgs.setImageDrawable(getResources().getDrawable(notes[0]));
         Button next = view.findViewById(R.id.next);
         Button submit = view.findViewById(R.id.submit);
         EditText editText = view.findViewById(R.id.answer);
         TextView response = view.findViewById(R.id.correct);
-        MediaPlayer mediaPlayer = MediaPlayer.create(view.getContext(), R.raw.note);
         submit.setOnClickListener(new View.OnClickListener() {
             @RequiresApi(api = Build.VERSION_CODES.R)
             @Override
@@ -48,9 +56,20 @@ public class AltoClef extends Fragment implements AdapterView.OnItemSelectedList
                     response.setText("✨✨Correct!✨✨");
                     response.setTextSize(20);
                     response.setTextColor(getResources().getColor(R.color.correct));
-                    mediaPlayer.start(); // this plays piano; get all the notes
-                    //show instrument
-
+                    if (note_names[count].equals("A"))
+                        violaA.start();
+                    if (note_names[count].equals("B"))
+                        violaB.start();
+                    if (note_names[count].equals("C"))
+                        violaC.start();
+                    if (note_names[count].equals("D"))
+                        violaD.start();
+                    if (note_names[count].equals("E"))
+                        violaE.start();
+                    if (note_names[count].equals("F"))
+                        violaF.start();
+                    if (note_names[count].equals("G"))
+                        violaG.start();
                 }
                 else{
                     play = false;
@@ -75,90 +94,5 @@ public class AltoClef extends Fragment implements AdapterView.OnItemSelectedList
         //audio format: alto-inst-A, alto-inst-B, alto-inst-C
 
         return view;
-    }
-
-    @Override
-    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        if(view != null) {
-            MediaPlayer pianoA = MediaPlayer.create(view.getContext(), R.raw.treb_piano_a);
-            MediaPlayer pianoB = MediaPlayer.create(view.getContext(), R.raw.treb_piano_b);
-            MediaPlayer pianoC = MediaPlayer.create(view.getContext(), R.raw.treb_piano_c);
-            MediaPlayer pianoD = MediaPlayer.create(view.getContext(), R.raw.treb_piano_d);
-            MediaPlayer pianoE = MediaPlayer.create(view.getContext(), R.raw.treb_piano_e);
-            MediaPlayer pianoF = MediaPlayer.create(view.getContext(), R.raw.treb_piano_f);
-            MediaPlayer pianoG = MediaPlayer.create(view.getContext(), R.raw.treb_piano_g);
-            MediaPlayer bassClarinetA = MediaPlayer.create(view.getContext(), R.raw.treb_bc_a);
-            MediaPlayer bassClarinetB = MediaPlayer.create(view.getContext(), R.raw.treb_bc_b);
-            MediaPlayer bassClarinetC = MediaPlayer.create(view.getContext(), R.raw.treb_bc_c);
-            MediaPlayer bassClarinetD = MediaPlayer.create(view.getContext(), R.raw.treb_bc_d);
-            MediaPlayer bassClarinetE = MediaPlayer.create(view.getContext(), R.raw.treb_bc_e);
-            MediaPlayer bassClarinetF = MediaPlayer.create(view.getContext(), R.raw.treb_bc_f);
-            MediaPlayer bassClarinetG = MediaPlayer.create(view.getContext(), R.raw.treb_bc_g);
-            MediaPlayer violinA = MediaPlayer.create(view.getContext(), R.raw.treb_v_a);
-            MediaPlayer violinB = MediaPlayer.create(view.getContext(), R.raw.treb_v_b);
-            MediaPlayer violinC = MediaPlayer.create(view.getContext(), R.raw.treb_v_c);
-            MediaPlayer violinD = MediaPlayer.create(view.getContext(), R.raw.treb_v_d);
-            MediaPlayer violinE = MediaPlayer.create(view.getContext(), R.raw.treb_v_e);
-            MediaPlayer violinF = MediaPlayer.create(view.getContext(), R.raw.treb_v_f);
-            MediaPlayer violinG = MediaPlayer.create(view.getContext(), R.raw.treb_v_g);
-            if (play) {
-                switch (position) {
-                    case 0:
-                        if (note_names[count].equals("A"))
-                            pianoA.start();
-                        if (note_names[count].equals("B"))
-                            pianoB.start();
-                        if (note_names[count].equals("C"))
-                            pianoC.start();
-                        if (note_names[count].equals("D"))
-                            pianoD.start();
-                        if (note_names[count].equals("E"))
-                            pianoE.start();
-                        if (note_names[count].equals("F"))
-                            pianoF.start();
-                        if (note_names[count].equals("G"))
-                            pianoG.start();
-                    case 1:
-                        if (note_names[count].equals("A"))
-                            bassClarinetA.start();
-                        if (note_names[count].equals("B"))
-                            bassClarinetB.start();
-                        if (note_names[count].equals("C"))
-                            bassClarinetC.start();
-                        if (note_names[count].equals("D"))
-                            bassClarinetD.start();
-                        if (note_names[count].equals("E"))
-                            bassClarinetE.start();
-                        if (note_names[count].equals("F"))
-                            bassClarinetF.start();
-                        if (note_names[count].equals("G"))
-                            bassClarinetG.start();
-                        break;
-                    case 2:
-                        if (note_names[count].equals("A"))
-                            violinA.start();
-                        if (note_names[count].equals("B"))
-                            violinB.start();
-                        if (note_names[count].equals("C"))
-                            violinC.start();
-                        if (note_names[count].equals("D"))
-                            violinD.start();
-                        if (note_names[count].equals("E"))
-                            violinE.start();
-                        if (note_names[count].equals("F"))
-                            violinF.start();
-                        if (note_names[count].equals("G"))
-                            violinG.start();
-                        break;
-
-                }
-
-            }
-        }
-    }
-
-    @Override
-    public void onNothingSelected(AdapterView<?> parent) {
-
     }
 }
